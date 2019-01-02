@@ -1,3 +1,19 @@
-<p>
+<h1>
   {{titulo}}
-</p>
+</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let film of films" class="col-4">
+      <div class="card center">
+        <img src="https://image.tmdb.org/t/p/w500{{film.backdrop_path}}" alt="" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{film.title}}</h5>
+          <p class="card-text">
+            {{film.overview}}
+          </p>
+          <a href="#" class="btn btn-primary" routerLink="/films/{{film.id}}">Ver</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

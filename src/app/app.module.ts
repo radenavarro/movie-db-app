@@ -8,11 +8,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { FilmsListComponent } from './films-list/films-list.component';
 import { PeliculasService } from './peliculas.service';
+import { FilmsDetailComponent } from './films-detail/films-detail.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { SeriesListComponent } from './series-list/series-list.component';
+import { SeriesService } from './series.service';
+import { SeriesDetailComponent } from './series-detail/series-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FilmsListComponent
+    FilmsListComponent,
+    FilmsDetailComponent,
+    NotFoundComponent,
+    SeriesListComponent,
+    SeriesDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +29,7 @@ import { PeliculasService } from './peliculas.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [PeliculasService],
+  providers: [PeliculasService, SeriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

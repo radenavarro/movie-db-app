@@ -1,0 +1,19 @@
+<h1>
+  {{titulo}}
+</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let serie of series" class="col-4">
+      <div class="card center">
+        <img src="https://image.tmdb.org/t/p/w500{{serie.backdrop_path}}" alt="" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{serie.name}}</h5>
+          <p class="card-text">
+            {{serie.overview}}
+          </p>
+          <a href="#" class="btn btn-primary" routerLink="/series/{{serie.id}}">Ver</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
